@@ -1,0 +1,10 @@
+<div class="container-fluid">
+  <div class="row">
+    <div *ngFor="let people of treningPeoples" class="col-md-3">
+      <div class="people text-white text-center pt-5">
+          <img [src]="imgSrc+people.profile_path" class="img-fluid">
+          <h3>{{people.name}}</h3>
+      </div>
+    </div>
+  </div>
+</div>

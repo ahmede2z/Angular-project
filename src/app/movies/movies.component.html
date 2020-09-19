@@ -1,0 +1,10 @@
+<div class="container-fluid">
+    <div class="row">
+      <div *ngFor="let moive of treningMovies" class="col-md-3">
+        <div class="moive text-white text-center pt-5">
+            <img [src]="imgSrc+moive.poster_path" class="img-fluid">
+            <h3>{{moive.title}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
