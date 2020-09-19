@@ -1,10 +1,22 @@
-<div class="container-fluid">
-    <div class="row">
-      <div *ngFor="let tv of treningTvs" class="col-md-3">
-        <div class="people text-white text-center pt-5">
-            <img [src]="imgSrc+tv.poster_path" class="img-fluid">
-            <h3>{{tv.name}}</h3>
+
+    <div class="container-fluid">
+  <h2 class="text-center text-white font-weight-bolder mt-4"><span class="text-danger">T</span>Vs</h2>
+  <div class="row">
+    <div *ngFor="let tv of treningTvs" class="col-md-3">
+      <div class="people text-white text-center pt-5">
+        <div class="img-cont rounded-lg">
+          <div class="rate">{{tv.vote_average}}</div>
+          <div class="cont-overlayout rounded-lg">
+            <div class="cont-header">
+              <h3>{{tv.name}}</h3>
+              <h4>{{tv.first_air_date}}</h4>
+            </div>
+            <p>{{tv.overview}}</p>
+          </div>
+          <img [src]="imgSrc+tv.poster_path" class="img-fluid rounded-lg">
         </div>
+        <h3>{{tv.name}}</h3>
       </div>
     </div>
   </div>
+</div>

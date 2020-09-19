@@ -8,7 +8,7 @@ import { RegistComponent } from './regist/regist.component';
 import { TvComponent } from './tv/tv.component';
 
 const routes: Routes = [
-  {path:'' ,redirectTo:'login' , pathMatch:'full'},
+  {path:'' ,redirectTo:'movies' , pathMatch:'full'},
   {path:'login' ,component:LoginComponent},
   {path:'movies' ,component:MoviesComponent},
   {path:'tv' ,component:TvComponent},

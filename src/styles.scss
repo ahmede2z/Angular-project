@@ -67,3 +67,47 @@ body {
   border: none;
   transition: all 0.4s;
 }
+
+
+.img-cont{
+  position: relative;
+  padding: 0px;
+  background-color: #dc3545;
+}
+.cont-overlayout{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  background-color:rgba($color: rgb(107, 35, 35), $alpha: 0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: space-between;
+  align-items: center;
+}
+.cont-overlayout p{
+  font-weight: bold;
+}
+
+.rate{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 4;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 20% 20%;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.img-cont:hover .cont-overlayout{
+  opacity: 1;
+}
+.img-cont:hover .rate{
+  opacity: 0;
+}

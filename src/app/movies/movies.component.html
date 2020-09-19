@@ -1,10 +1,21 @@
 <div class="container-fluid">
-    <div class="row">
-      <div *ngFor="let moive of treningMovies" class="col-md-3">
-        <div class="moive text-white text-center pt-5">
-            <img [src]="imgSrc+moive.poster_path" class="img-fluid">
-            <h3>{{moive.title}}</h3>
+  <h2 class="text-center text-white font-weight-bolder mt-4"><span class="text-danger">M</span>ovies</h2>
+  <div class="row">
+    <div *ngFor="let moive of treningMovies" class="col-md-3">
+      <div class="moive text-white text-center pt-5">
+        <div class="img-cont rounded-lg">
+          <div class="rate">{{moive.vote_average}}</div>
+          <div class="cont-overlayout rounded-lg">
+            <div class="cont-header">
+              <h3>{{moive.title}}</h3>
+              <h4>{{moive.release_date}}</h4>
+            </div>
+            <p>{{moive.overview}}</p>
+          </div>
+          <img [src]="imgSrc+moive.poster_path" class="img-fluid rounded-lg">
         </div>
+        <h3>{{moive.title}}</h3>
       </div>
     </div>
   </div>
+</div>
